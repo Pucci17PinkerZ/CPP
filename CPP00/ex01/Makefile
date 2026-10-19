@@ -1,20 +1,18 @@
 CXX = c++
 NAME = ok
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-
-
 SRC = main.cpp\
-
+OBJ = %.c = %.o
 INCLUDE = 	Contact.hpp \
 			Phonebook.hpp\
 
-OBJ = %.c = %.o
+
 
 all : $(OBJ)
 	$(CXX) $(OBJ) -o $(NAME)
 %.o: %.c
 	@printf "making obj files\n"
-	$(CXX) $(CFLAGS) $(SRC) $(INCLUDE) -o $< $@
+	$(CXX) $(CFLAGS) $(SRC) $(INCLUDE) -c $< -o $@
 clean: 
 	@printf "cleaning obj files\n"
 

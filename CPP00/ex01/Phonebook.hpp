@@ -1,16 +1,17 @@
 # ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
-
+#include 
 #include "Contact.hpp"
 
 class Phonebook{
 
 	private :
+		Contact list[8];
+		int total_mbr;
 
 	public:
-
-	// element a ajouter 
-	//une array de 8 contact
+		void	add_contact();
+		void	search_contact() const;
 };
 
 # endif
