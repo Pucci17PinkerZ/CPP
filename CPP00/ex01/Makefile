@@ -1,5 +1,5 @@
 CXX = c++
-NAME = ok
+NAME = phonebook
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = main.cpp\
 OBJ = %.c = %.o

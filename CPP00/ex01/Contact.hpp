@@ -1,19 +1,22 @@
-# ifndef CONTACT_HPP
+#ifndef CONTACT_HPP
 #define CONTACT_HPP
 #include <iostream>
+#include <iomanip>
 
-class Contact {
+class Contact
+{
 	private:
-	std::string first_name;
-	std::string last_name;
-	std::string nickname;
-	std::string phone_number;
-	std::string darkest_secret;
+		std::string first_name;
+		std::string last_name;
+		std::string nickname;
+		std::string phone_number;
+		std::string darkest_secret;
 
 	public:
-		int		set_contact();
-		void	get_contact_full();
-		void	get_contact_cut();
+		int set_contact();
+		void get_contact_cut(int pos) const;
+		void get_contact_full() const;
+
 };
 
 #endif

@@ -5,7 +5,7 @@ int main(void)
 {
 	Phonebook phonebook;
 	std::string line;
-
+	
 	while (true)
 	{
 		std::cout << "Enter One of thoses commands : ADD, SEARCH, EXIT" << std::endl;
