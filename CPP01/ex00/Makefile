@@ -1,20 +1,20 @@
 CXX = c++
 NAME = Zombie
-FLAGS = -Wall -Wextra -Werror -std=c++98
-SRC = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp \
-OBJ = $(SRC:.cpp=.o)
-HEADER = Zombie.hpp\
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+SRC = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp 
+OBJ = $(SRC:%.cpp=%.o)
+HEADER = Zombie.hpp
 
 all : $(NAME)
 
 
 $(NAME): $(OBJ)
 	@printf "Linking files for final exec!\n"
-	@$(CXX) $(FLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
-%.o: %.cpp
-	@printf "compiling obj files\n"
-	@$(CXX) $(FLAGS) $(SRC) $(HEADER) -c $< -o $@
+%.o: %.cpp $(HEADER)
+	@printf "compiling $<\n"
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean :
 	@printf "Cleaning obj files\n"
@@ -27,4 +27,4 @@ fclean : clean
 re : fclean all
 
 
-.PHONY : make clean fclean re
+.PHONY : all clean fclean re

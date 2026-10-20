@@ -1,7 +1,7 @@
 #ifndef ZOMBIE_HPP
 # define ZOMBIE_HPP
 #include <iostream>
-#include <strings>
+#include <string>
 
 
 class Zombie
@@ -10,6 +10,6 @@ class Zombie
 		void	announce(void);
 	private:
 		std::string _name;
-}
+};
 
 #endif
