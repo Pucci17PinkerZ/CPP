@@ -17,7 +17,7 @@
 		std::cout << std::setw(10) << "Index" << "|"
 				  << std::setw(10) << "First Name" << "|"
 				  << std::setw(10) << "Last Name" << "|"
-				  << std::setw(10) << "Nickname" << std::endl;
+				  << std::setw(10) << "_nickname" << std::endl;
 
 	}
 
