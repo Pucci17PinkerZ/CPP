@@ -35,13 +35,14 @@
 			list[i].get_contact_cut(i);
 		std::cout << "Enter the index of the contact you want to display :" ;
 		std::getline(std::cin, input);
-		if (input.length() != 1 || std::isdigit(input[0]))
+		std::cout << "input length" << input.length() << std::endl;
+		if (input.length() != 1 || !std::isdigit(input[0]))
 		{
 			std::cout << "Wrong index" << std::endl;
 			return ;
 		}
 		index = input[0] - '0';
-		if (index < 0 || index > total_mbr)
+		if (index < 0 || index >= total_mbr)
 		{
 			std::cout << "Index out of range" << std::endl;
 			return ;

@@ -23,23 +23,37 @@
 				std::cout << "some fields are empty try again" << std::endl;
 				return (1);
 			}
-			//checker si il y a des lettre dans le num de telephone + si il y a des num dans les autres champs
+			for(int i = 0; i < phone_number.length(); i++)
+			{
+				if (!isdigit(phone_number[i]))
+				{
+					std::cout << "phone number must be digit you call with char??" << std::endl;
+					return (1);
+				}
+			}
 			return (0);
+		}
+
+		std::string cut_string(std::string str)
+		{
+			if (str.length() > 10)
+				return (str.substr(0, 9) + ".");
+			return (str);
 		}
 
 		void	Contact::get_contact_cut(int pos) const{
 			
-			std::cout << std::setw(10) << pos << "|" << std::endl;
-			std::cout << std::setw(10) << first_name << "|" << std::endl;
-			std::cout << std::setw(10) << last_name << "|" << std::endl;
-			std::cout << std::setw(10) << nickname << "|" << std::endl;
+			std::cout << std::setw(10) << pos << "|";
+			std::cout << std::setw(10) << cut_string(first_name) << "|";
+			std::cout << std::setw(10) << cut_string(last_name) << "|";
+			std::cout << std::setw(10) << cut_string(nickname) << "|" << std::endl;
 		}
 
 		void	Contact::get_contact_full() const{
-			std::cout << "First name :" << first_name << std::endl;
-			std::cout << "Last name :" << last_name << std::endl;
-			std::cout << "Nickname :" << nickname << std::endl;
-			std::cout << "Phone number :" << phone_number << std::endl;
+			std::cout << "First name     :" << first_name << std::endl;
+			std::cout << "Last name      :" << last_name << std::endl;
+			std::cout << "Nickname       :" << nickname << std::endl;
+			std::cout << "Phone number   :" << phone_number << std::endl;
 			std::cout << "Darkest secret :" << darkest_secret << std::endl;
 		}
 
