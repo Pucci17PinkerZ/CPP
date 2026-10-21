@@ -1,7 +1,7 @@
 CXX = c++
 NAME = ZombieHorde
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP
-SRC = main.cpp
+SRC = main.cpp Zombie.cpp zombieHorde.cpp
 OBJ = $(SRC:%.cpp=%.o)
 DEP =$(SRC:%.cpp=%.d)
 
@@ -9,7 +9,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@printf "cooking the final exec\n"
-	$(CXX) $(CXXFLAGS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 %.o: %.cpp
 	@printf "compiling files in obj\n"
@@ -23,4 +23,6 @@ fclean: clean
 	rm -f $(NAME)
 re: fclean all
 
-.PHONY all clean fclean re
+-include $(DEP)
+
+.PHONY: all clean fclean re
