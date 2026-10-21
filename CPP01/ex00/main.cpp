@@ -2,6 +2,17 @@
 
 int main()
 {
-	std::cout << "toto" << std::endl;
+	Zombie *gnarg;
+	Zombie gnorg("gnorg");
+
+	gnarg = newZombie("gnarg");
+
+	gnarg->announce();
+	gnorg.announce();
+
+	randomChump("gnurg");
+	randomChump("Foo");
+
+	delete gnarg;
 	return (0);
 }
