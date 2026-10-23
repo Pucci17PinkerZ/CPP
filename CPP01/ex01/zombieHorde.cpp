@@ -6,6 +6,6 @@ Zombie* zombieHorde( int N, std::string name )
 
 	horde = new Zombie[N];
 	for (int i = 0; i < N; i++)
-		horde[i].setZombieName(name);
+		horde[i] = Zombie(name);
 	return (horde);
 }
