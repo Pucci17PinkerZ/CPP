@@ -5,6 +5,9 @@
 void	replace(void)
 {
 
+	//avec std::string.find je pourrai trouver une occurance
+	
+
 }
 
 int	main(int ac, char **av)
@@ -27,18 +30,19 @@ int	main(int ac, char **av)
 		return 1;
 	}
 
-	std::ifstream inFile(filename);
+	std::ifstream inFile(filename.c_str());
 	if (!inFile)
 	{
 		std::cout<< "infile was not created error" << std::endl;
 		return 1;
 	}
-	std::ofstream outFile(filename + ".replace");
+	std::ofstream outFile((filename + ".replace").c_str());
 	if (!outFile)
 	{
 		std::cout<< "outfile was not created error" << std::endl;
 		return 1;
 	}
-
+	inFile.close();
+	outFile.close();
 	return 0;
 }
