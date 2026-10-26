@@ -9,7 +9,7 @@ int main(int ac, char **av)
 		for (int i = 1; i < ac; i++)
 		{
 			std::string argument = av[i];
-			for (int j = 0; j < argument.length(); j++)
+			for (int j = 0; j < (int)argument.length(); j++)
 				std::cout << (char)std::toupper(argument[j]);
 		}
 		std::cout << std::endl;

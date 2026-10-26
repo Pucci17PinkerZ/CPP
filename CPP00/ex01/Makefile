@@ -3,9 +3,9 @@ NAME = phonebook
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = main.cpp\
 	Contact.cpp\
-	Phonebook.cpp\
+	Phonebook.cpp
 
-HEADER = Contact.hpp Phonebook.hpp\
+HEADER = Contact.hpp Phonebook.hpp
 
 all: $(NAME)
 

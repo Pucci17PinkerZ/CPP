@@ -1,12 +1,12 @@
 CXX = c++
 NAME = megaphone
 FLAGS = -Wall -Wextra -Werror -std=c++98
-OBJ = %.c = %.o
-SRC = Megaphone.cpp
+SRC = megaphone.cpp
+OBJ = $(SRC:%.cpp = %.o)
 
 all: $(NAME)
 
-NAME : $(OBJ)
+$(NAME) : $(OBJ)
 	@printf "linking object files\n"
 	@$(CXX) $(FLAGS) $(OBJ) -o $(NAME)
 %.o : %.c
