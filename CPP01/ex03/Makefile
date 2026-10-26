@@ -1,21 +1,20 @@
 CXX = c++
 NAME = UNNECESSARY_VIOLENCE
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP
-
-SRC= main.cpp
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP
+SRC= main.cpp Weapon.cpp HumanA.cpp HumanB.cpp 
 OBJ = $(SRC:%.cpp=%.o)
-DEP = $(SRC:%.cpp=%.o)
+DEP = $(SRC:%.cpp=%.d)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CXX) $(CFLAGS) $@ -o $(NAME)
+	$(CXX) $(CXXFLAGS) $^ -o $(NAME)
 
 %.o: %.cpp
-	$(CXX) $(CFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(DEP)
 
 fclean: clean
 	rm -f $(NAME)

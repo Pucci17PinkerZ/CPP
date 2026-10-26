@@ -13,7 +13,7 @@ Weapon::~Weapon()
 Weapon::Weapon(std::string weaponType)
 {
 	_type = weaponType;
-		std::cout << "A new Weapon " << _type << "was created" << std::endl;
+		std::cout << "A new Weapon " << _type << " was created" << std::endl;
 }
 const std::string Weapon::getType() const
 {

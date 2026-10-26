@@ -3,7 +3,7 @@
 HumanA::HumanA(std::string humanName, Weapon& weaponSelection): _name(humanName) , _myWeapon(weaponSelection)
 {
 	std::cout << "HumanA " << humanName;
-	std::cout << "was crafted with his Weapon" << weaponSelection.getType() << std::endl;
+	std::cout << " was crafted with his Weapon " << weaponSelection.getType() << std::endl;
 }
 
 

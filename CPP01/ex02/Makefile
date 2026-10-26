@@ -9,7 +9,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@printf "cooking the final exec\n"
-	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $@ -o $(NAME)
 
 %.o: %.cpp
 	@printf "compiling files in obj\n"
@@ -22,7 +22,7 @@ fclean: clean
 	@printf "cleaning the exec too\n"
 	rm -f $(NAME)
 re: fclean all
-
+	
 -include $(DEP)
 
 .PHONY: all clean fclean re
