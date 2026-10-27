@@ -1,7 +1,7 @@
 CXX = c++
 NAME = UNNECESSARY_VIOLENCE
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP
-SRC= main.cpp
+SRC= main.cpp Harl.cpp
 OBJ = $(SRC:%.cpp=%.o)
 DEP = $(SRC:%.cpp=%.d)
 

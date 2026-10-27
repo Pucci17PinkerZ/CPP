@@ -2,7 +2,7 @@
 
 int	main(void)
 {
-	int nbr = 5;
+	unsigned int nbr = 5;
 	Zombie* zombieGang;
 
 	zombieGang = zombieHorde(nbr, "gangzz");
