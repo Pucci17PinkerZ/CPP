@@ -23,7 +23,7 @@
 				std::cout << "some fields are empty try again" << std::endl;
 				return (1);
 			}
-			for(int i = 0; i < _phone_number.length(); i++)
+			for(int i = 0; i < (int)_phone_number.length(); i++)
 			{
 				if (!isdigit(_phone_number[i]))
 				{
@@ -52,7 +52,7 @@
 		void	Contact::get_contact_full() const{
 			std::cout << "First name     :" << _first_name << std::endl;
 			std::cout << "Last name      :" << _last_name << std::endl;
-			std::cout << "_nickname       :" << _nickname << std::endl;
+			std::cout << "Nickname       :" << _nickname << std::endl;
 			std::cout << "Phone number   :" << _phone_number << std::endl;
 			std::cout << "Darkest secret :" << _darkest_secret << std::endl;
 		}
