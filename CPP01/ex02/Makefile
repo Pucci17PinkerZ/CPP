@@ -9,7 +9,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@printf "cooking the final exec\n"
-	$(CXX) $(CXXFLAGS) $@ -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 %.o: %.cpp
 	@printf "compiling files in obj\n"

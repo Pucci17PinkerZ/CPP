@@ -6,7 +6,7 @@ int	main(void)
 	Zombie* zombieGang;
 
 	zombieGang = zombieHorde(nbr, "gangzz");
-	for(int i = 0; i < nbr; i++)
+	for(unsigned int i = 0; i < nbr; i++)
 	{
 		std::cout << "Zombie " << i << " ";
 		zombieGang[i].announce();

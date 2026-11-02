@@ -14,7 +14,7 @@ class Harl
 		void info( void );
 		void warning( void );
 		void error( void );
-		void (Harl::*complain[4])(void);
+		void (Harl::*_fns[4])(void);
 		std::string levels[4];
 };
 

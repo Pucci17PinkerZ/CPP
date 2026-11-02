@@ -1,13 +1,12 @@
 #include "Harl.hpp"
 
-int	main(int ac, char **av)
+int	main(void)
 {
-	if (ac != 2){
-		std::cerr << "invalid input usage: ./harlFilter <level>" << std::endl;
-		return 1;
-	}
-
 	Harl harlOnlyKnowOneThing;
-	harlOnlyKnowOneThing.complain(av[1]);
+
+	harlOnlyKnowOneThing.complain("DEBUG");
+	harlOnlyKnowOneThing.complain("INFO");
+	harlOnlyKnowOneThing.complain("WARNING");
+	harlOnlyKnowOneThing.complain("ERROR");
 	return 0;
 }

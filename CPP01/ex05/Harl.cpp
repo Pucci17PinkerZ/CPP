@@ -8,10 +8,10 @@ Harl::Harl()
 	levels[2] = "WARNING";
 	levels[3] = "ERROR";
 
-	complain[0] = &Harl::debug;
-	complain[1] = &Harl::info;
-	complain[2] = &Harl::warning;
-	complain[3] = &Harl::error;
+	_fns[0] = &Harl::debug;
+	_fns[1] = &Harl::info;
+	_fns[2] = &Harl::warning;
+	_fns[3] = &Harl::error;
 	std::cout << "Harl is ready to complain" << std::endl;
 }
 
@@ -22,8 +22,10 @@ Harl::~Harl()
 
 void	Harl::complain(std::string level)
 {
-	for(int i = 0; i < 4;i++){
-		if (level == level[i])
+	for (int i = 0; i < 4; i++)
+	{
+		if (level == levels[i])
+			(this->*_fns[i])();
 	}
 }
 
@@ -34,7 +36,7 @@ void	Harl::debug( void )
 
 void	Harl::info( void )
 {
-	std::cout << " cannot believe adding extra bacon costs more money. You didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!" << std::endl;
+	std::cout << "I cannot believe adding extra bacon costs more money. You didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!" << std::endl;
 }
 
 void	Harl::warning( void )
@@ -44,5 +46,5 @@ void	Harl::warning( void )
 
 void	Harl::error( void )
 {
-	std::cout << "his is unacceptable! I want to speak to the manager now." << std::endl;
+	std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
 }

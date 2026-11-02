@@ -17,7 +17,7 @@ void	replace(std::ifstream& inFile, std::ofstream& outFile,
 			outFile << s2;
 			pos_start = find_pos + s1.length();
 		}
-		outFile << line.substr(pos_start, find_pos - pos_start);
+		outFile << line.substr(pos_start);
 		if(!inFile.eof())
 			outFile << std::endl;
 	}
