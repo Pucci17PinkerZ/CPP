@@ -1,8 +1,9 @@
 # MAIN VARIABLES
 
 CXX=c++
+NAME= fixed
 CXXFLAGS= -Wall -Wextra -Werror -std=c++98
-SRC= main.cpp
+SRC= main.cpp Fixed.cpp
 OBJ=$(SRC:.cpp=.o)
 DEP=$(SRC:.cpp=.d)
 
