@@ -17,7 +17,7 @@ Harl::Harl()
 
 Harl::~Harl()
 {
-	std::cout << "Harl as been destroyed" << std::endl;
+	std::cout << "Harl has been destroyed" << std::endl;
 }
 
 void	Harl::complain(std::string level)

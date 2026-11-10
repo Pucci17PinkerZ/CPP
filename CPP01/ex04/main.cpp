@@ -30,7 +30,7 @@ int	main(int ac, char **av)
 	if (ac != 4)
 	{
 		std::cout << "an input is missing" << std::endl;
-		std::cout << "please use the program this way: ./sedIsForLoser <filemane> <s1> <s2> " << std::endl;
+		std::cout << "please use the program this way: ./SED_IS_FOR_LOSERS <filename> <s1> <s2> " << std::endl;
 		return 1;
 	}
 	
@@ -41,7 +41,7 @@ int	main(int ac, char **av)
 	if(filename.empty() || s1.empty())
 	{
 		std::cout << "an input is missing" << std::endl;
-		std::cout << "please use the program this way: ./sedIsForLoser <filemane> <s1> <s2> " << std::endl;
+		std::cout << "please use the program this way: ./SED_IS_FOR_LOSERS <filename> <s1> <s2> " << std::endl;
 		return 1;
 	}
 
